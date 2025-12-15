@@ -144,7 +144,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
+    min-height: 60vh;
     margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   
   .card {
@@ -152,6 +154,7 @@
     padding: 2rem;
     border-radius: 14px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    margin-bottom: 2rem;
   }
   
   .card h3 {
