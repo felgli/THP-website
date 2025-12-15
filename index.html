@@ -61,12 +61,26 @@
     <h2>Contact Us</h2>
     <p>Have a project in mind? Let’s talk.</p>
 
+        <!-- Contact  Form-->
+    <form name="contact" method="POST" data-netlify="true" class="contact-form">
+      <input type="hidden" name="form-name" value="contact">
+    
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Your message" required></textarea>
+    
+      <button type="submit">Send Message</button>
+    </form>
+    
     <div class="contact-box">
       <p><strong>Email:</strong> info@humanpartner.com</p>
       <p><strong>Phone:</strong> +33-6-XX.XX.XX</p>
       <p><strong>Location:</strong> Marseille / Paris</p>
     </div>
   </section>
+
+
+
 
   <!-- Footer -->
   <footer class="footer">
