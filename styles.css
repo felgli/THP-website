@@ -17,7 +17,8 @@
   
   body {
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    /*font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: var(--text);
     background: var(--bg);
   }
@@ -58,17 +59,32 @@
   
   /* Hero */
   .hero {
-    max-width: 900px;
-    margin: 4rem auto;
-    padding: 0 1.5rem;
+    /*max-width: 900px;*/
+    margin: 0.2rem auto;
+    padding: 6rem 1.5rem;
     text-align: center;
+    max-width: 100%;
+    /* Background image */
+    background-image: url("/images/marseille.jpeg");
+    /*background-size: contain;*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+    /* Optional: make it full viewport height */
+    min-height: 130vh;
+    /* Optional: text color if image is dark */
+    color: white;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
   }
   
   .hero h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 4.6rem;
     font-weight: 350;
-    margin-bottom: 1rem;
+    margin-top: 6rem;
+    margin-bottom: 0;
+    color: white;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
   }
   .accent {
     color: #acb48d; /* your accent color */
@@ -80,8 +96,6 @@
     margin-bottom: 1rem;
   }
 
-
-  
   .hero p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 2.2rem;
@@ -159,28 +173,3 @@
   }
   
   
-  .hero {
-    max-width: 100%;
-    margin: 0;
-    padding: 6rem 1.5rem;
-    text-align: center;
-  
-    /* Background image */
-    background-image: url("/images/marseille.jpeg");
-    /*background-size: contain;*/
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  
-    /* Optional: make it full viewport height */
-    min-height: 140vh;
-  
-    /* Optional: text color if image is dark */
-    color: white;
-    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
-  }
-  
-  .hero h1 {
-    color: white;
-    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
-  }
