@@ -1,216 +1,240 @@
+/* =========================
+   Design tokens
+========================= */
 :root {
-    --bg: #f8fafc;
-    --bg-alt: #f1f5f9;
-    --card: #ffffff;
-    --text: #0f172a;
-    --muted: #475569;
-    --accent: #2563eb;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    margin: 0;
-    /*font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;*/
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: var(--text);
-    background: var(--bg);
-  }
-  
-  /* Header / Nav */
-  .header {
-    position: sticky;
-    top: 0;
-    background: white;
-    border-bottom: 1px solid #e5e7eb;
-    z-index: 100;
-  }
-  
-  .nav {
-    max-width: 1100px;
-    margin: auto;
-    padding: 1rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .logo {
-    font-weight: 700;
-    font-size: 1.2rem;
-  }
-  
-  nav a {
-    margin-left: 1.5rem;
-    text-decoration: none;
-    color: var(--muted);
-    font-weight: 500;
-  }
-  
-  nav a:hover {
-    color: var(--accent);
-  }
-  
-  /* Hero */
-  .hero {
-    /*max-width: 900px;*/
-    margin: 0.2rem auto;
-    padding: 1rem 1.5rem;
-    text-align: center;
-    max-width: 100%;
-    /* Background image */
-    background-image: url("/images/marseille2.jpeg");
-    /*background-size: contain;*/
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;  
-    /* Optional: make it full viewport height */
-    min-height: 130vh;
-    /* Optional: text color if image is dark */
-    color: white;
-    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
-  }
-  .hero-logo {
-    width: 140px;       /* adjust size */
-    height: auto;
-    margin-bottom: 1rem;
-  }
-  .hero h1 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 4.6rem;
-    font-weight: 350;
-    margin-top: 1rem;
-    margin-bottom: 0;
-    color: white;
-    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
-  }
-  .accent {
-    color: #acb48d; /* your accent color */
-  }
-  .hero h2 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 2.6rem;
-    font-weight: 350;
-    margin-bottom: 1rem;
-  }
+  --bg: #f8fafc;
+  --bg-alt: #f1f5f9;
+  --bg-blue: #093a6b;
+  --card: #ffffff;
 
-  .hero p {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 2.2rem;
-    color: var(--muted);
-    color: white;
-  }
-  
-  .button {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 0.8rem 1.6rem;
-    background: var(--accent);
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  /* Sections */
-  .section {
-    max-width: 1100px;
-    scroll-margin-top: 90px;
-    margin: 4rem auto;
-    padding: 0 1.5rem;
-  }
-  
-  .section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .section p {
-    color: var(--muted);
-    max-width: 700px;
-  }
-  
-  .alt {
-    background: var(--bg-alt);
-    scroll-margin-top: 90px;
-    margin: 4rem auto;
-    padding: 0rem 1.5rem;
-  }
-  
-  /* Services */
-  .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-    min-height: 60vh;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .card {
-    background: var(--card);
-    padding: 2rem;
-    border-radius: 14px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-    margin-bottom: 2rem;
-  }
-  
-  .card h3 {
-    margin-top: 0;
-  }
-  
-  /* Contact */
-  .contact-box {
-    margin-top: 1.5rem;
-    text-align: left;
-  }
-  
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 2rem;
-    border-top: 1px solid #e5e7eb;
-    color: var(--muted);
-  }
-  
-  .contact-form {
-    max-width: 500px;
-    margin-top: 2rem;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    border: 1px solid #cbd5f5;
-    font-family: inherit;
-    font-size: 1rem;
-  }
-  
-  .contact-form textarea {
-    resize: vertical;
-  }
-  
-  .contact-form button {
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.6rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  
-  .contact-form button:hover {
-    opacity: 0.9;
-  }
-  
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #2563eb;
+  --accent-soft: #acb48d;
+
+  --max-width: 1000px;
+  --section-space: 4rem;
+  --header-height: 57px;
+}
+
+/* =========================
+   Base
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%; /* respects browser/user settings */
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* =========================
+   Layout helpers
+========================= */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  scroll-margin-top: var(--header-height);
+  padding: 1.5rem;
+  min-height: 60vh;
+}
+
+.section.alt {
+  scroll-margin-top: var(--header-height);
+  background: var(--bg-alt);
+  min-height: 60vh;
+}
+
+/* =========================
+   Header / Nav
+========================= */
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 100;
+}
+
+.nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Section titles */
+.section h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+}
+
+/* Paragraphs */
+p {
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+  line-height: 1.6;
+}
+
+/* =========================
+   Hero
+========================= */
+.hero {
+  background-image: url("/images/marseille2.jpeg");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  min-height: 130vh;
+  color: white;
+  text-align: center;
+}
+
+.hero .container {
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+}
+
+.hero-logo {
+  width: 140px;
+  margin-bottom: 0.1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  font-weight: 350;
+  margin: 1rem 0 0;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero h2 {
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.hero p {
+  font-size: 2.2rem;
+}
+
+.accent {
+  color: var(--accent-soft);
+}
+
+/* Section headings */
+.section h2 {
+  margin: 0 0 1.5rem 0;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+.button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* =========================
+   Services
+========================= */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  min-height: 60vh;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* =========================
+   Contact
+========================= */
+.contact-form {
+  max-width: 500px;
+  margin-top: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   Footer
+========================= */
+.footer {
+  text-align: center;
+  padding: 0 rem;
+  border-top: 1px solid #e5e7eb;
+  color: var(--muted);
+}
