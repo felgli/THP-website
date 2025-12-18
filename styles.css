@@ -4,13 +4,13 @@
 :root {
   --bg: #f8fafc;
   --bg-alt: #f1f5f9;
-  --bg-blue: #093a6b;
+  --bg-blue: #1B294C;
   --card: #ffffff;
 
   --text: #0f172a;
   --muted: #475569;
   --accent: #2563eb;
-  --accent-soft: #acb48d;
+  --accent-soft: #B4AC8E;
 
   --max-width: 1000px;
   --section-space: 4rem;
@@ -87,15 +87,25 @@ nav a {
   text-decoration: none;
   color: var(--muted);
   font-weight: 500;
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  padding: 0.5rem 0;
 }
 
 nav a:hover {
   color: var(--accent);
 }
 
+@media (max-width: 600px) {
+  nav a {
+    margin-left: 1rem;
+  }
+}
+
+
 /* Section titles */
 .section h2 {
   font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+  margin: 0 0 1.5rem 0;
 }
 
 /* Paragraphs */
@@ -138,21 +148,16 @@ p {
   font-size: clamp(1.6rem, 3vw, 2.6rem);
   font-weight: 300;
   margin-bottom: 2rem;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
-  font-size: 2.2rem;
+  font-size: clamp(1.2rem, 2.5vw, 2.2rem);
 }
 
 .accent {
   color: var(--accent-soft);
 }
-
-/* Section headings */
-.section h2 {
-  margin: 0 0 1.5rem 0;
-}
-
 
 /* =========================
    Buttons
@@ -161,13 +166,17 @@ p {
   display: inline-block;
   margin-top: 2rem;
   padding: 0.8rem 1.6rem;
-  background: var(--accent);
+  background: var(--accent-soft);
   color: white;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
 }
-
+.button:hover,
+.button:focus-visible {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
 /* =========================
    Services
 ========================= */
@@ -215,7 +224,7 @@ p {
 }
 
 .contact-form button {
-  background: var(--accent);
+  background: var(--bg-blue);
   color: white;
   border: none;
   padding: 0.8rem 1.6rem;
@@ -227,6 +236,7 @@ p {
 
 .contact-form button:hover {
   opacity: 0.9;
+  transform: translateY(-1px);
 }
 
 /* =========================
@@ -234,7 +244,7 @@ p {
 ========================= */
 .footer {
   text-align: center;
-  padding: 0 rem;
+  padding: 0.5rem 0.5rem;
   border-top: 1px solid #e5e7eb;
   color: var(--muted);
 }
