@@ -9,6 +9,7 @@
 
   --text: #0f172a;
   --muted: #475569;
+  --white: #eaf3f3;
   --accent: #2563eb;
   --accent-soft: #B4AC8E;
 
@@ -48,13 +49,13 @@ body {
 .section {
   scroll-margin-top: var(--header-height);
   padding: 1.5rem;
-  min-height: 60vh;
+  min-height: 100vh;
 }
 
 .section.alt {
   scroll-margin-top: var(--header-height);
   background: var(--bg-alt);
-  min-height: 60vh;
+  min-height: 100vh;
 }
 
 /* =========================
@@ -63,7 +64,7 @@ body {
 .header {
   position: sticky;
   top: 0;
-  background: white;
+  background:var(--bg-blue);     
   border-bottom: 1px solid #e5e7eb;
   z-index: 100;
 }
@@ -71,67 +72,110 @@ body {
 .nav {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 0 1.5rem;   /* 🔴 remove vertical padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-weight: 700;
-  font-size: 1.2rem;
+  background:var(--bg-blue);     
+  padding: 0.5rem 0.75rem;  /* or any color */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
+
+.logo img {
+  height: 40px; /* adjust as needed */
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .logo img {
+    height: 32px;
+  }
+}
+
 
 nav a {
   margin-left: 1.5rem;
   text-decoration: none;
-  color: var(--muted);
+  color: var(--white);
   font-weight: 500;
   font-size: clamp(0.9rem, 1.2vw, 1.05rem);
   padding: 0.5rem 0;
 }
 
 nav a:hover {
-  color: var(--accent);
+  color: var(--accent-soft);
+}
+
+.nav-links {
+  display: flex; /* desktop */
+  gap: 1.5rem;
 }
 
 /* Hamburger button */
-.menu-toggle {
-  display: none;
-  font-size: 1.6rem;
+.hamburger {
+  display: none; /* desktop: hidden */
   background: none;
   border: none;
+  font-size: 2rem;
   cursor: pointer;
+  color: var(--white);
 }
 
 /* Mobile styles */
 @media (max-width: 700px) {
-  .menu-toggle {
-    display: block;
+  .hero {
+    background-position: center top;
+    min-height: 70vh;
   }
 
   .nav-links {
+    display: none;           /* hide menu */
+    flex-direction: column;  /* vertical */
+    gap: 1rem;
     position: absolute;
-    top: var(--header-height);
-    right: 0;
-    background: white;
+    top: 100%;
+    left: 0;
     width: 100%;
-    display: none;
-    flex-direction: column;
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid #e5e7eb;
+    background:var(--bg-blue);     
+    padding: 1rem 0;
+    z-index: 99;
   }
+  
+  .nav-links.active {
+    display: flex;           /* show menu when active */
+  }
+  
+  .hamburger {
+    display: block;          /* show hamburger */
+  }
+  
 
-  .nav-links a {
-    margin: 0.75rem 0;
-    font-size: 1.1rem;
-  }
 
-  .nav-links.open {
-    display: flex;
-  }
 }
 
+
+
+
+
+
+
+
+
+.lang a {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.lang a.active {
+  opacity: 1;
+  font-weight: 600;
+}
 
 /* Section titles */
 .section h2 {
@@ -141,7 +185,7 @@ nav a:hover {
 
 /* Paragraphs */
 p {
-  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+  font-size: clamp(1 rem, 1.2vw, 1.5rem);
   line-height: 1.6;
 }
 
@@ -149,11 +193,11 @@ p {
    Hero
 ========================= */
 .hero {
-  background-image: url("/images/marseille2.jpeg");
+  background-image: url("/images/THP-marseille-notext.jpg");
   background-size: cover;
-  background-position: center bottom;
+  background-position: center top;
   background-repeat: no-repeat;
-  min-height: 130vh;
+  min-height: 100vh;
   color: white;
   text-align: center;
 }
@@ -215,7 +259,17 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
-  min-height: 60vh;
+  min-height: 40vh;
+  margin-top: 2rem;
+}
+
+/* =========================
+   Expertise
+========================= */
+.expertise {
+  display: grid;
+  gap: 1.5rem;
+  min-height: 40vh;
   margin-top: 2rem;
 }
 
@@ -234,6 +288,13 @@ p {
 /* =========================
    Contact
 ========================= */
+
+.contact {
+  gap: 1.5rem;
+  min-height: 60vh;
+  background: var(--bg-alt);
+  margin-top: 2rem;
+}
 .contact-form {
   max-width: 500px;
   margin-top: 2rem;
@@ -268,6 +329,34 @@ p {
 .contact-form button:hover {
   opacity: 0.9;
   transform: translateY(-1px);
+}
+
+.contact-box {
+  margin-top: 2rem;
+}
+
+.contact-box p {
+  margin: 0.4rem 0;
+}
+.contact-linkedin a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+}
+
+.contact-linkedin a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.linkedin-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 /* =========================

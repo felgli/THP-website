@@ -7,22 +7,24 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-
 <body>
-
   <!-- Navigation -->
   <header class="header">
     <div class="nav">
-      <div class="logo">The Human Partner</div>
-  
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
-        ☰
+      <a href="/" class="logo">
+        <img src="images/Logo2.svg" alt="The Human Partner logo">
+      </a>  
+
+         <!-- Hamburger button -->
+      <button class="hamburger" aria-label="Toggle menu">
+        &#9776; <!-- simple hamburger icon -->
       </button>
-  
+
       <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#services">Nos Services</a>
+        <a href="#expertise">Notre Expertise</a>
+        <a href="#contact">Contactez-nous</a>
+        </span>
       </nav>
     </div>
   </header>
@@ -30,80 +32,144 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <img src="/images/THP_logo.png" alt="Company logo" class="hero-logo">
+      <img src="/images/Logo2.svg" alt="Company logo" class="hero-logo">
       <h1>THE <span class="accent">H</span>UMAN PARTNER</h1>
       <h2>MADE IN MARSEILLE</h2>
       <p> </p>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="section alt">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>
-        Add some text here to describe The Human Partner Company.
-      </p>
-    </div>
-  </section>
-
   <!-- Services -->
-  <section id="services" class="section">
+  <section id="services" class="section alt">
     <div class="container">
-      <h2>Our Services</h2>
+      <h2>Nos Services</h2>
+        <p>
+          The Human Partner est un cabinet d’Executive Search et de conseil en leadership fondé par Olivier Lemaître, dirigeant et consultant depuis plus de trente ans en
+          France et à l’international.
+        </p>
+        <p>
+          Notre conviction est simple. La technologie accélère. La justesse vient de l’intuition,
+          de la nuance et de la confiance.
+        </p>
+        <h3>Nos interventions</h3>
 
-      <div class="services">
-        <div class="card">
-          <h3>Service 1</h3>
-          <p>This is a description of Service 1.</p>
-        </div>
-
-        <div class="card">
-          <h3>Service 2</h3>
-          <p>This is a description of Service 2.</p>
-        </div>
-
-        <div class="card">
-          <h3>Service 3</h3>
-          <p>This is a description of Service 3.</p>
+        <div class="services">
+          <div class="card">
+            <h3>Leadership advisory</h3>
+            <p>Décisions critiques, structuration d’équipes de direction.</p>
+          </div>
+  
+          <div class="card">
+            <h3>Executive Search</h3>
+            <p>Cadres dirigeants en France et à l’international..</p>
+          </div>
+  
+          <div class="card">
+            <h3>Intérim exécutif</h3>
+            <p>Transformation, situations sensibles, continuité de leadership..</p>
+          </div>
         </div>
       </div>
+  </section>
+  
+  <!-- Exoertice -->
+  <section id="expertise" class="section">
+    <div class="container">
+      <h2>Notre Expertise</h2>
+        <p>Nous accompagnons dirigeants, conseils d’administration et investisseurs sur des
+          enjeux critiques de leadership. Chaque mission est menée personnellement, sans
+          délégation, avec une approche directe et engagée.</p>
+    <h3>Nos interventions</h3>
+
+    <div class="expertise">
+      <div class="card">
+        <h3>Notre modèle de valeur</h3>
+        <p>
+          Une relation équilibrée entre le client, le candidat et le consultant. Même exigence, même attention, même respect. Cette discipline sécurise la décision et sa durée.
+        </p>
+        <p>
+          Nous commençons par écouter, comprendre et clarifier l’enjeu réel. Au delà du fit
+          immédiat, nous sécurisons l’alignement culturel, la capacité à exécuter et l’impact
+          dans le temps.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Notre méthode</h3>
+        <p>Expertise 2 text.</p>
+      </div>
+
+      <div class="card">
+        <h3>Nos principes</h3>
+        <p>Expertise 3 text.</p>
+      </div>
     </div>
+  </div>
+</div>
+
+
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section alt">
+  <section id="contact" class="contact">
     <div class="container">
-      <h2>Contact Us</h2>
-      <p>Have a project in mind? Let’s talk.</p>
+      <h2>Contactez-nous</h2>
 
       <!-- Contact Form -->
       <form name="contact" method="POST" data-netlify="true" class="contact-form">
         <input type="hidden" name="form-name" value="contact">
 
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="Your message" required></textarea>
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message" required></textarea>
 
-        <button type="submit">Send Message</button>
+        <button type="submit">Envoyer Message</button>
       </form>
 
+      
       <div class="contact-box">
-        <p><strong>Email:</strong> info@humanpartner.com</p>
-        <p><strong>Phone:</strong> +33-6-XX.XX.XX</p>
-        <p><strong>Location:</strong> Marseille / Paris</p>
+        <p><strong>Email:</strong> contact@thehumanpartner.com</p>
+        <p><strong>Implantation:</strong> Basé à Marseille, présent à Paris et à l’international.</p>
+      
+        <p class="contact-linkedin">
+          <a
+            href="https://www.linkedin.com/in/olivierlemaitre/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Contact Olivier on LinkedIn"
+          >
+            <img
+              src="/images/Linkedinlogo.png"
+              alt=""
+              class="linkedin-icon"
+              aria-hidden="true"
+            />
+            <span>Prendre contact avec Olivier sur LinkedIn</span>
+          </a>
+        </p>
       </div>
+      
+      
+
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>© 2025 The Human Partner. All rights reserved.</p>
-    </div>
+    <p>
+      © 2026 The Human Partner ·
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
   </footer>
 
-  <script src="menu.js"></script>
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+  
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
