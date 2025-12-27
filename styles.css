@@ -375,7 +375,8 @@ p {
   margin: 0.4rem 0;
 }
 
-.contact-linkedin a {
+.contact-linkedin a,
+.contact-email a {
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
@@ -384,7 +385,8 @@ p {
   text-decoration: none;
 }
 
-.contact-linkedin a:hover {
+.contact-linkedin a:hover ,
+.contact-email a:hover{
   color: var(--accent-soft);
   text-decoration: underline;
 }
