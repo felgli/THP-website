@@ -1,175 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Human Partner</title>
+
+  <!-- SEO -->
+  <title>The Human Partner | Executive Search & Leadership Advisory</title>
+  <meta name="description" content="The Human Partner accompagne dirigeants, conseils d’administration et investisseurs en Executive Search et leadership advisory, en France et à l’international." />
+  <link rel="canonical" href="https://www.thehumanpartner.com/" />
+
+  <!-- Social sharing (optional but recommended) -->
+  <meta property="og:title" content="The Human Partner | Executive Search & Leadership Advisory" />
+  <meta property="og:description" content="Cabinet d’Executive Search et de conseil en leadership basé à Marseille, actif en France et à l’international." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.thehumanpartner.com/" />
+  <meta property="og:image" content="https://www.thehumanpartner.com/images/og-image.jpg" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Navigation -->
-  <header class="header">
-    <div class="nav">
-      <a href="/" class="logo">
-        <img src="images/Logo2.svg" alt="The Human Partner logo">
-      </a>  
 
-         <!-- Hamburger button -->
-      <button class="hamburger" aria-label="Toggle menu">
-        &#9776; <!-- simple hamburger icon -->
-      </button>
+<!-- =========================
+     CONTENT (INLINE)
+========================= -->
+<script>
+const CONTENT = {
+  nav_services: "Nos Services",
+  nav_expertise: "Notre Expertise",
+  nav_contact: "Contactez-nous",
 
-      <nav class="nav-links">
-        <a href="#services">Nos Services</a>
-        <a href="#expertise">Notre Expertise</a>
-        <a href="#contact">Contactez-nous</a>
-        </span>
-      </nav>
-    </div>
-  </header>
+  hero_title: "THE <span class='accent'>H</span>UMAN PARTNER",
+  hero_subtitle: "MADE IN MARSEILLE",
+  hero_subtitle: "Executive Search and <br class='mobile-break'>Leadership Advisory",
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <img src="/images/Logo2.svg" alt="Company logo" class="hero-logo">
-      <h1>THE <span class="accent">H</span>UMAN PARTNER</h1>
-      <h2>MADE IN MARSEILLE</h2>
-      <p> </p>
-    </div>
-  </section>
+  services_title: "Nos Services",
+  services_intro_1:
+    "The Human Partner est un cabinet d’Executive Search et de conseil en leadership, fondé par Olivier Lemaître, dirigeant et consultant depuis plus de trente ans en France et à l’international. Nous accompagnons les organisations lorsque les décisions humaines deviennent stratégiques, parce qu’elles engagent la performance, la gouvernance et la trajectoire à long terme.",
+  services_intro_2:
+    "Notre conviction est simple. La technologie accélère et élargit le champ des possibles. La justesse, elle, se construit dans le temps. Elle vient de l’intuition, de la nuance, de la qualité d’écoute et de la confiance établie avec celles et ceux qui décident.",
+  service_1_title: "Leadership advisory",
+  service_1_text: "Décisions critiques, structuration d’équipes de direction.",
 
-  <!-- Services -->
-  <section id="services" class="section alt">
-    <div class="container">
-      <h2>Nos Services</h2>
-        <p>
-          The Human Partner est un cabinet d’Executive Search et de conseil en leadership fondé par Olivier Lemaître, dirigeant et consultant depuis plus de trente ans en
-          France et à l’international.
-        </p>
-        <p>
-          Notre conviction est simple. La technologie accélère. La justesse vient de l’intuition,
-          de la nuance et de la confiance.
-        </p>
-        <h3>Nos interventions</h3>
+  service_2_title: "Executive Search",
+  service_2_text: "Cadres dirigeants en France et à l’international.",
 
-        <div class="services">
-          <div class="card">
-            <h3>Leadership advisory</h3>
-            <p>Décisions critiques, structuration d’équipes de direction.</p>
-          </div>
-  
-          <div class="card">
-            <h3>Executive Search</h3>
-            <p>Cadres dirigeants en France et à l’international..</p>
-          </div>
-  
-          <div class="card">
-            <h3>Intérim exécutif</h3>
-            <p>Transformation, situations sensibles, continuité de leadership..</p>
-          </div>
-        </div>
-      </div>
-  </section>
-  
-  <!-- Exoertice -->
-  <section id="expertise" class="section">
-    <div class="container">
-      <h2>Notre Expertise</h2>
-        <p>Nous accompagnons dirigeants, conseils d’administration et investisseurs sur des
-          enjeux critiques de leadership. Chaque mission est menée personnellement, sans
-          délégation, avec une approche directe et engagée.</p>
-    <h3>Nos interventions</h3>
+  service_3_title: "Intérim exécutif",
+  service_3_text: "Transformation, situations sensibles, continuité de leadership.",
 
-    <div class="expertise">
-      <div class="card">
-        <h3>Notre modèle de valeur</h3>
-        <p>
-          Une relation équilibrée entre le client, le candidat et le consultant. Même exigence, même attention, même respect. Cette discipline sécurise la décision et sa durée.
-        </p>
-        <p>
-          Nous commençons par écouter, comprendre et clarifier l’enjeu réel. Au delà du fit
-          immédiat, nous sécurisons l’alignement culturel, la capacité à exécuter et l’impact
-          dans le temps.
-        </p>
-      </div>
+  expertise_title: "Notre Expertise",
+  expertise_intro:
+    "Nous accompagnons dirigeants, conseils d’administration et investisseurs sur des enjeux critiques de leadership. Chaque mission est menée personnellement, sans délégation, avec une approche directe et engagée.",
 
-      <div class="card">
-        <h3>Notre méthode</h3>
-        <p>Expertise 2 text.</p>
-      </div>
+  /* First expertise card (Notre modèle de valeur) */
+  expertise_1_title: "Notre modèle de valeur",
+  expertise_1_text_1:
+    "Une relation équilibrée entre le client, le candidat et le consultant. Même exigence, même attention, même respect. Cette discipline sécurise la décision et sa durée.",
+  expertise_1_text_2:
+    "Nous commençons par écouter, comprendre et clarifier l’enjeu réel. Au-delà du fit immédiat, nous sécurisons l’alignement culturel, la capacité à exécuter et l’impact dans le temps.",
 
-      <div class="card">
-        <h3>Nos principes</h3>
-        <p>Expertise 3 text.</p>
-      </div>
+  /* Second expertise card (Notre méthode) */
+  expertise_2_title: "Notre méthode",
+  expertise_2_text_1:
+    "Nous clarifions le cap, les enjeux, les zones de risque et les critères non négociables. Nous cartographions les talents avec une lecture de marché fine, enrichie par la Tech et l’IA, pour identifier une diversité de profils réellement pertinents.",
+  expertise_2_text_2:
+    "Nous évaluons en profondeur le leadership, la culture et la dynamique de l’équipe en place, car la réussite dépend autant du contexte que de l’individu. Nous sécurisons la décision par une gouvernance claire et un alignement des compétences, des attentes et des responsabilités. Enfin, nous accompagnons l’intégration, du cadrage de la rémunération à l’onboarding.",
+
+  /* Third expertise card (Nos principes) */
+  expertise_3_title: "Nos principes",
+  expertise_3_text_1:
+    "Nous clarifions avant d’agir, parce que la précision permet un travail de qualité. Nous accordons la même attention aux entreprises et aux talents, car la confiance ne se négocie pas. Nous créons des rencontres qui produisent un impact durable, car un recrutement réussi se mesure dans le temps.",
+
+  contact_title: "Contactez-nous",
+  contact_email: "contact@thehumanpartner.com",
+  contact_location: "Basé à Marseille, présent à Paris et à l’international.",
+  contact_button: "Envoyer le message",
+
+  linkedin_text: "Prendre contact avec Olivier sur LinkedIn",
+
+  footer_privacy: "Privacy Policy"
+};
+</script>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+<header class="header">
+  <div class="nav">
+    <a href="/" class="logo">
+      <img src="/images/Logo2.svg" alt="The Human Partner" />
+    </a>
+
+    <button class="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+      &#9776;
+    </button>
+
+    <nav class="nav-links">
+      <a href="#services" data-content="nav_services"></a>
+      <a href="#expertise" data-content="nav_expertise"></a>
+      <a href="#contact" data-content="nav_contact"></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- =========================
+     HERO
+========================= -->
+<section class="hero">
+  <div class="container">
+    <!--img src="/images/Logo2.svg" class="hero-logo" alt="" /> -->
+    <h1 data-content="hero_title"></h1>
+    <h2 data-content="hero_subtitle"></h2>
+  </div>
+</section>
+
+<!-- =========================
+     SERVICES
+========================= -->
+<section id="services" class="section alt">
+  <div class="container">
+    <h2 data-content="services_title"></h2>
+    <p data-content="services_intro_1"></p>
+    <p data-content="services_intro_2"></p>
+
+    <div class="services">
+      <article class="card">
+        <h3 data-content="service_1_title"></h3>
+        <p data-content="service_1_text"></p>
+      </article>
+
+      <article class="card">
+        <h3 data-content="service_2_title"></h3>
+        <p data-content="service_2_text"></p>
+      </article>
+
+      <article class="card">
+        <h3 data-content="service_3_title"></h3>
+        <p data-content="service_3_text"></p>
+      </article>
     </div>
   </div>
-</div>
+</section>
 
+<!-- =========================
+     EXPERTISE
+========================= -->
+<section id="expertise" class="section" aria-labelledby="expertise-title">
+  <div class="container">
+    <h2 id="expertise-title" data-content="expertise_title"></h2>
+    <p data-content="expertise_intro"></p>
 
-  </section>
+    <div class="expertise">
+      <article class="card-h">
+        <h3 data-content="expertise_1_title"></h3>
+        <p data-content="expertise_1_text_1"></p>
+        <p data-content="expertise_1_text_2"></p>
+      </article>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contactez-nous</h2>
+      <article class="card-h">
+        <h3 data-content="expertise_2_title"></h3>
+        <p data-content="expertise_2_text_1"></p>
+        <p data-content="expertise_2_text_2"></p>
+      </article>
 
-      <!-- Contact Form -->
-      <form name="contact" method="POST" data-netlify="true" class="contact-form">
-        <input type="hidden" name="form-name" value="contact">
-
-        <input type="text" name="name" placeholder="Votre nom" required>
-        <input type="email" name="email" placeholder="Votre email" required>
-        <textarea name="message" placeholder="Votre message" required></textarea>
-
-        <button type="submit">Envoyer Message</button>
-      </form>
-
-      
-      <div class="contact-box">
-        <p><strong>Email:</strong> contact@thehumanpartner.com</p>
-        <p><strong>Implantation:</strong> Basé à Marseille, présent à Paris et à l’international.</p>
-      
-        <p class="contact-linkedin">
-          <a
-            href="https://www.linkedin.com/in/olivierlemaitre/"
-            target="_blank"
-            rel="noopener"
-            aria-label="Contact Olivier on LinkedIn"
-          >
-            <img
-              src="/images/Linkedinlogo.png"
-              alt=""
-              class="linkedin-icon"
-              aria-hidden="true"
-            />
-            <span>Prendre contact avec Olivier sur LinkedIn</span>
-          </a>
-        </p>
-      </div>
-      
-      
-
+      <article class="card-h">
+        <h3 data-content="expertise_3_title"></h3>
+        <p data-content="expertise_3_text_1"></p>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>
-      © 2026 The Human Partner ·
-      <a href="privacy.html">Privacy Policy</a>
-    </p>
-  </footer>
 
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-  
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+<!-- =========================
+     CONTACT
+========================= -->
+<section id="contact" class="section alt">
+  <div class="container">
+    <h2 data-content="contact_title"></h2>
+
+    <form name="contact" method="POST" data-netlify="true" class="contact-form">
+      <input type="hidden" name="form-name" value="contact" />
+    
+      <label for="name" class="sr-only">Votre nom</label>
+      <input id="name" type="text" name="name" placeholder="Votre nom" required />
+    
+      <label for="email" class="sr-only">Votre email</label>
+      <input id="email" type="email" name="email" placeholder="Votre email" required />
+    
+      <label for="message" class="sr-only">Votre message</label>
+      <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+    
+      <button type="submit">Envoyer le message</button>
+    </form>
+    
+    <div class="contact-box">
+      <p><strong>Email :</strong> <span data-content="contact_email"></span></p>
+      <p><strong>Implantation :</strong> <span data-content="contact_location"></span></p>
+
+      <p class="contact-linkedin">
+        <a href="https://www.linkedin.com/in/olivierlemaitre/" target="_blank">
+          <img src="/images/LinkedInlogoBlue.png" class="linkedin-icon" alt="" />
+          <span data-content="linkedin_text"></span>
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="footer">
+  <p>
+    © 2026 The Human Partner ·
+    <a href="privacy.html" data-content="footer_privacy"></a>
+  </p>
+</footer>
+
+<!-- =========================
+     CONTENT INJECTION
+========================= -->
+<script>
+  document.querySelectorAll("[data-content]").forEach(el => {
+    const key = el.dataset.content;
+    if (CONTENT[key]) {
+      el.innerHTML = CONTENT[key];
+    }
+  });
+
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', open);
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', false);
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
