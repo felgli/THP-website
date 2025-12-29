@@ -69,6 +69,12 @@ body {
 .mobile-break {
   display: none;
 }
+/* Hide "and" on mobile only */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+}
 
 @media (max-width: 768px) {
   .mobile-break {
@@ -219,7 +225,7 @@ p {
    Hero
 ========================= */
 .hero {
-  background-image: url("/images/THP-marseille-darker1.jpg");
+  background-image: url("/images/THP-marseille-less-sky3.jpg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -265,10 +271,10 @@ p {
 ========================= */
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
   gap: var(--space-lg);
   min-height: 40vh;
-  margin-top: var(--space-xl);
+  margin-top: var(--space-md);
 }
 
 .card {

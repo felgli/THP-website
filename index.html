@@ -32,8 +32,7 @@ const CONTENT = {
   nav_contact: "Contactez-nous",
 
   hero_title: "THE <span class='accent'>H</span>UMAN PARTNER",
-  hero_subtitle: "MADE IN MARSEILLE",
-  hero_subtitle: "Executive Search and <br class='mobile-break'>Leadership Advisory",
+  hero_subtitle: "Executive Search <span class='hide-mobile'>| </span><br class='mobile-break'>Leadership Advisory",
 
   services_title: "Nos Services",
   services_intro_1:
@@ -45,9 +44,6 @@ const CONTENT = {
 
   service_2_title: "Executive Search",
   service_2_text: "Cadres dirigeants en France et à l’international.",
-
-  service_3_title: "Intérim exécutif",
-  service_3_text: "Transformation, situations sensibles, continuité de leadership.",
 
   expertise_title: "Notre Expertise",
   expertise_intro:
@@ -73,6 +69,8 @@ const CONTENT = {
     "Nous clarifions avant d’agir, parce que la précision permet un travail de qualité. Nous accordons la même attention aux entreprises et aux talents, car la confiance ne se négocie pas. Nous créons des rencontres qui produisent un impact durable, car un recrutement réussi se mesure dans le temps.",
 
   contact_title: "Contactez-nous",
+  contact_intro_1:
+    "If you want to contact us.",
   contact_location: "Basé à Marseille, présent à Paris et à l’international.",
   contact_button: "Envoyer le message",
 
@@ -126,20 +124,16 @@ const CONTENT = {
     <p data-content="services_intro_2"></p>
 
     <div class="services">
-      <article class="card">
+      <article class="card-h">
         <h3 data-content="service_1_title"></h3>
         <p data-content="service_1_text"></p>
       </article>
 
-      <article class="card">
+      <article class="card-h">
         <h3 data-content="service_2_title"></h3>
         <p data-content="service_2_text"></p>
       </article>
 
-      <article class="card">
-        <h3 data-content="service_3_title"></h3>
-        <p data-content="service_3_text"></p>
-      </article>
     </div>
   </div>
 </section>
@@ -180,6 +174,7 @@ const CONTENT = {
 <section id="contact" class="section alt">
   <div class="container">
     <h2 data-content="contact_title"></h2>
+    <p data-content="contact_intro_1"></p>
 
     <form name="contact" method="POST" data-netlify="true" class="contact-form">
       <input type="hidden" name="form-name" value="contact" />
