@@ -275,7 +275,6 @@ p {
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
   gap: var(--space-lg);
-  min-height: 40vh;
   margin-top: var(--space-md);
 }
 
@@ -287,7 +286,6 @@ p {
 .expertise {
   display: grid;
   gap: var(--space-lg);
-  min-height: 40vh;
   margin-top: var(--space-md);
 }
 
