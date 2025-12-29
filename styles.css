@@ -60,7 +60,7 @@ html {
 }
 
 body {
-  margi
+  margin: 0;
   font-family: var(--font-base);
   color: var(--text);
   background: var(--bg);
