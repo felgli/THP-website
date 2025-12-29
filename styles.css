@@ -60,7 +60,7 @@ html {
 }
 
 body {
-  margin: 0;
+  margi
   font-family: var(--font-base);
   color: var(--text);
   background: var(--bg);
@@ -219,7 +219,7 @@ p {
    Hero
 ========================= */
 .hero {
-  background-image: url("/images/THP-marseille-notext.jpg");
+  background-image: url("/images/THP-marseille-cv2.jpg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
