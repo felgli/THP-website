@@ -432,3 +432,65 @@ p {
 .footer a:hover {
   opacity: 0.8;                 /* subtle hover effect */
 }
+
+/* =========================
+   Privacy / Legal pages
+========================= */
+
+.privacy {
+  max-width: 760px;              /* better reading width */
+  margin: 0 auto;
+}
+
+.privacy h1 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.privacy h2 {
+  font-size: clamp(1.2rem, 1.6vw, 1.4rem);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.privacy h3 {
+  font-size: 1.05rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.privacy p,
+.privacy li,
+.privacy address {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.privacy ul,
+.privacy ol {
+  padding-left: 1.25rem;
+  margin: var(--space-sm) 0 var(--space-md);
+}
+
+.privacy li {
+  margin-bottom: 0.4rem;
+}
+
+.privacy address {
+  font-style: normal;
+  margin: var(--space-sm) 0;
+}
+
+.privacy a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.privacy .small {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
