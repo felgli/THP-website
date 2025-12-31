@@ -18,6 +18,8 @@
   --max-width: 1000px;
   --section-space: 4rem;
   --header-height: 73px;
+  --header-max-width: 1000px; /* slightly wider than 1000px */
+
 
   /* Spacing scale */
   --space-xs: 0.25rem;
@@ -87,7 +89,7 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--accent-soft);
   outline-offset: 2px;
 }
 
@@ -123,7 +125,7 @@ textarea:focus-visible {
 }
 
 .nav {
-  max-width: var(--max-width);
+  max-width: var(--header-max-width);
   margin: 0 auto;
   padding: 0 var(--space-lg);
   display: flex;
@@ -138,6 +140,8 @@ textarea:focus-visible {
   display: flex;
   align-items: center;
   text-decoration: none;
+  margin-left: -15px;
+
 }
 
 .logo img {
@@ -149,6 +153,7 @@ textarea:focus-visible {
 @media (max-width: 768px) {
   .logo img {
     height: 40px;
+    margin-left: 20px;
   }
 }
 
