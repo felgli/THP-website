@@ -150,18 +150,22 @@
   </footer>
 
   <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
   
-    hamburger.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('active');
-      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
+      if (!hamburger || !navLinks) return; // safety guard
   
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+  
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
       });
     });
   </script>
