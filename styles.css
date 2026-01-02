@@ -39,6 +39,7 @@
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
   --font-size-lg: 1.125rem;
+  --text-body: clamp(0.9rem, 1.1vw, 1.1rem);
 }
 
 @media (max-width: 768px) {
@@ -228,6 +229,19 @@ p {
   line-height: 1.6;
 }
 
+/* Normalize list typography */
+ul,
+ol {
+  font-size: var(--text-body);
+  line-height: 1.0;
+  margin: var(--space-md) 0;
+  padding-left: 1.4em; /* keeps bullets aligned nicely */
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
 /* =========================
    Hero
 ========================= */
@@ -283,6 +297,15 @@ p {
   margin-top: var(--space-md);
 }
 
+.pull-quote {
+  margin: var(--space-xl) 0;
+  padding-left: var(--space-lg);
+  border-left: 3px solid var(--accent-soft);
+  font-size: clamp(1.1rem, 1.4vw, 1.4rem);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text);
+}
 
 
 /* =========================
@@ -319,6 +342,10 @@ p {
 
 .card-h > *:last-child { margin-bottom: 0; }
 
+.card-h ul {
+  margin-left: 1.1em;
+  padding-left: 1.1em;
+}
 
 
 /* =========================
